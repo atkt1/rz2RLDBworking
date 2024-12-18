@@ -1,0 +1,14 @@
+{
+  "name": "survey_backgrounds",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "image": {
+      "type": "text",
+      "nullable": true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "auth_logs": {
+    "user_id": "References users(id) ON DELETE SET NULL"
+  },
+  "coupons": {
+    "user_id": "References users(id) ON DELETE CASCADE"
+  },
+  "orders": {
+    "user_id": "References users(id) ON DELETE CASCADE"
+  },
+  "package_inserts": {
+    "user_id": "References users(id) ON DELETE CASCADE",
+    "survey_id": "References surveys(id) ON DELETE CASCADE"
+  },
+  "products": {
+    "user_id": "References users(id) ON DELETE CASCADE",
+    "survey_id": "References surveys(id) ON DELETE CASCADE",
+    "logo_id": "References logos(id) ON DELETE SET NULL"
+  },
+  "refresh_tokens": {
+    "user_id": "References users(id) ON DELETE CASCADE"
+  },
+  "reviews": {
+    "user_id": "References users(id) ON DELETE CASCADE",
+    "survey_id": "References surveys(id) ON DELETE CASCADE"
+  },
+  "surveys": {
+    "user_id": "References users(id) ON DELETE CASCADE",
+    "background_id": "References survey_backgrounds(id) ON DELETE SET NULL"
+  },
+  "users": {
+    "plan_id": "References plans(id) ON DELETE SET NULL"
+  },
+  "vouchers": {
+    "user_id": "References users(id) ON DELETE CASCADE"
+  }
+}

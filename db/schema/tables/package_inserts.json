@@ -1,0 +1,49 @@
+{
+  "name": "package_inserts",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "survey_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "surveys(id)"
+    },
+    "name": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "headline": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "subtitle": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "brand_url": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "background_color": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "style_size": {
+      "type": "package_insert_style_size",
+      "nullable": true
+    },
+    "created_at": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "surveys",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "background_id": {
+      "type": "integer",
+      "nullable": true,
+      "references": "survey_backgrounds(id)"
+    },
+    "survey_name": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "survey_status": {
+      "type": "survey_status",
+      "nullable": true,
+      "default": "ACTIVE"
+    },
+    "survey_style": {
+      "type": "survey_style",
+      "nullable": true,
+      "default": "Simple"
+    },
+    "marketplace_review_required": {
+      "type": "boolean",
+      "nullable": true,
+      "default": false
+    },
+    "minimum_review_length": {
+      "type": "integer",
+      "nullable": true
+    },
+    "minimum_star_rating": {
+      "type": "integer",
+      "nullable": true
+    },
+    "time_delay": {
+      "type": "integer",
+      "nullable": true
+    },
+    "url": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "qr_code": {
+      "type": "text",
+      "nullable": true
+    },
+    "created_at": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

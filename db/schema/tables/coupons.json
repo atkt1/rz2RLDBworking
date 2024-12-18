@@ -1,0 +1,24 @@
+{
+  "name": "coupons",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "voucher_code": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "available_count": {
+      "type": "integer",
+      "nullable": true,
+      "default": 0
+    }
+  }
+}

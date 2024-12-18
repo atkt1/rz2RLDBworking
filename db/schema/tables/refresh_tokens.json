@@ -1,0 +1,33 @@
+{
+  "name": "refresh_tokens",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "token": {
+      "type": "text",
+      "nullable": false,
+      "unique": true
+    },
+    "device_info": {
+      "type": "text",
+      "nullable": true
+    },
+    "expires_at": {
+      "type": "timestamp without time zone",
+      "nullable": false
+    },
+    "created_at": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

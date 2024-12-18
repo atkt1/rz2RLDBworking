@@ -1,0 +1,23 @@
+{
+  "name": "orders",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "order_id": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "marketplace": {
+      "type": "marketplace",
+      "nullable": true
+    }
+  }
+}

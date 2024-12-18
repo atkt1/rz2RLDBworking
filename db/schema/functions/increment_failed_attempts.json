@@ -1,0 +1,11 @@
+{
+  "name": "increment_failed_attempts",
+  "parameters": {
+    "p_ip_address": "text",
+    "p_identifier": "text",
+    "p_last_attempt": "timestamp without time zone"
+  },
+  "returns": "void",
+  "language": "plpgsql",
+  "description": "Increments the failed login attempts counter with automatic reset after 15 minutes"
+}

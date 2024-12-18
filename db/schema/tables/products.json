@@ -1,0 +1,41 @@
+{
+  "name": "products",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "survey_id": {
+      "type": "integer",
+      "nullable": true,
+      "references": "surveys(id)"
+    },
+    "logo_id": {
+      "type": "integer",
+      "nullable": true,
+      "references": "logos(id)"
+    },
+    "name": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "product_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "marketplace": {
+      "type": "marketplace",
+      "nullable": true
+    },
+    "image": {
+      "type": "text",
+      "nullable": true
+    }
+  }
+}

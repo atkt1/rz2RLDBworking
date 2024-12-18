@@ -1,0 +1,36 @@
+{
+  "name": "auth_logs",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": true,
+      "references": "users(id)"
+    },
+    "event_type": {
+      "type": "text",
+      "nullable": false
+    },
+    "ip_address": {
+      "type": "text",
+      "nullable": true
+    },
+    "device_info": {
+      "type": "text",
+      "nullable": true
+    },
+    "details": {
+      "type": "jsonb",
+      "nullable": true
+    },
+    "timestamp": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

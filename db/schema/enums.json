@@ -1,0 +1,15 @@
+{
+  "boolean_enum": ["Yes", "No"],
+  "frequency": ["Monthly", "Yearly"],
+  "marketplace": ["Amazon", "Flipkart"],
+  "package_insert_style_size": [
+    "Basic (3.5\" X 8.5\")",
+    "Basic (4\" X 6\")",
+    "Stadard (3.5\" X 8.5\")",
+    "Stadard (4\" X 6\")"
+  ],
+  "plan_name": ["Unpaid", "Enterprise", "Professional", "Starter"],
+  "survey_status": ["ACTIVE", "PAUSED"],
+  "survey_style": ["Simple", "WithInfo"],
+  "voucher_status": ["Available", "Consumed"]
+}

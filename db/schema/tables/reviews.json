@@ -1,0 +1,49 @@
+{
+  "name": "reviews",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "user_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "users(id)"
+    },
+    "survey_id": {
+      "type": "integer",
+      "nullable": false,
+      "references": "surveys(id)"
+    },
+    "first_name": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "last_name": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "email_id": {
+      "type": "character varying",
+      "nullable": true
+    },
+    "rating": {
+      "type": "integer",
+      "nullable": true
+    },
+    "review": {
+      "type": "text",
+      "nullable": true
+    },
+    "order_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "date": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

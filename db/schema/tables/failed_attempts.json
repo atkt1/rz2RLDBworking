@@ -1,0 +1,34 @@
+{
+  "name": "failed_attempts",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "ip_address": {
+      "type": "text",
+      "nullable": false
+    },
+    "identifier": {
+      "type": "varchar",
+      "nullable": false,
+      "default": "'anonymous'"
+    },
+    "attempt_count": {
+      "type": "integer",
+      "nullable": true,
+      "default": 1
+    },
+    "last_attempt_at": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    },
+    "last_reset": {
+      "type": "timestamp without time zone",
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cleanup_expired_tokens": {
+    "returns": "void",
+    "language": "plpgsql",
+    "description": "Automatically removes expired refresh tokens"
+  },
+  "create_user_with_plan": {
+    "parameters": {
+      "p_email": "character varying",
+      "p_firstname": "character varying",
+      "p_lastname": "character varying",
+      "p_password_hash": "text",
+      "p_plan_name": "plan_name"
+    },
+    "returns": {
+      "type": "TABLE",
+      "columns": {
+        "id": "integer",
+        "email": "character varying",
+        "firstname": "character varying",
+        "lastname": "character varying",
+        "role": "character varying",
+        "plan_id": "integer"
+      }
+    },
+    "language": "plpgsql",
+    "description": "Creates a new user with the specified plan and returns user details with explicit table references"
+  },
+  "update_updated_at_column": {
+    "type": "trigger",
+    "returns": "trigger",
+    "language": "plpgsql",
+    "description": "Updates the updated_at timestamp when a record is modified"
+  }
+}

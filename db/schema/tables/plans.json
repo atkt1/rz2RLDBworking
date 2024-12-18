@@ -1,0 +1,33 @@
+{
+  "name": "plans",
+  "columns": {
+    "id": {
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true
+    },
+    "name": {
+      "type": "plan_name",
+      "nullable": false,
+      "unique": true
+    },
+    "amount_paid": {
+      "type": "integer",
+      "nullable": true,
+      "default": 0
+    },
+    "current_reviews_count": {
+      "type": "integer",
+      "nullable": true,
+      "default": 0
+    },
+    "max_review_count": {
+      "type": "integer",
+      "nullable": true
+    },
+    "plan_frequency": {
+      "type": "frequency",
+      "nullable": true
+    }
+  }
+}
